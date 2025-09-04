@@ -1,0 +1,9 @@
+cat > .gitignore <<EOF
+.venv/
+env/
+__pycache__/
+*.pyc
+.vscode/
+EOF
+git add .gitignore
+git commit -m "Add .gitignore to ignore .venv and caches"
