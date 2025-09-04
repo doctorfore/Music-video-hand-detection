@@ -9,6 +9,9 @@ On newer versions (like 3.12 or 3.13), pip can’t find a compatible wheel, so i
 Other wise run command : 
 
 pip install opencv-python mediapipe
+pip install --upgrade pip
+pip install opencv-python mediapipe
+
 
 
 
