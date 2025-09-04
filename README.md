@@ -1,16 +1,24 @@
 # Music-video-hand-detection
 
-As of now:
+Environmental Setups before installing: 
+python3.10 -m venv .venv
+source .venv/bin/activate
+pip install opencv-python
 
-mediapipe only supports up to Python 3.10 (sometimes 3.11 unofficially).
 
-On newer versions (like 3.12 or 3.13), pip can’t find a compatible wheel, so it fails.
 
-Other wise run command : 
+Then run command : 
 
 pip install opencv-python mediapipe
 pip install --upgrade pip
 pip install opencv-python mediapipe
+
+
+
+
+As of now:
+mediapipe only supports up to Python 3.10 (sometimes 3.11 unofficially).
+On newer versions (like 3.12 or 3.13), pip can’t find a compatible wheel, so it fails.
 
 
 
