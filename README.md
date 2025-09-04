@@ -14,8 +14,8 @@ pip install opencv-python mediapipe
 
 
 Felix developing notes: 
-Check python version : python3 --version
-Crete virtual environment : python3.10 -m venv .venv
+Check python version : python3 --version /n
+Crete virtual environment : python3.10 -m venv .venv/n
 Remove virtual environment : rm -rf .venv
 Check which python pip installed : which pip / which python 
 
