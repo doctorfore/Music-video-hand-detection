@@ -14,7 +14,7 @@ while True:
         for hand in result.multi_hand_landmarks:
             draw.draw_landmarks(frame, hand, mp.solutions.hands.HAND_CONNECTIONS)
 
-            # Detection the direction of the index finger ：IF tip(8) is above pip(6) 
+            # Detection direction of the index finger ：IF tip(8) is above pip(6) 
             pts = [(lm.x, lm.y) for lm in hand.landmark]
             if pts[8][1] < pts[6][1]:
                 cv2.putText(frame, "Hands UP", (30,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
