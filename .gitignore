@@ -1,9 +1,29 @@
-cat > .gitignore <<EOF
+# Python virtual environments
 .venv/
 env/
+
+# Python cache and compiled files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.pyclass
+
+# IDE and editor settings
 .vscode/
-EOF
-git add .gitignore
-git commit -m "Add .gitignore to ignore .venv and caches"
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
