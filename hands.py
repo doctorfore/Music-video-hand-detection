@@ -1,5 +1,14 @@
 import cv2, mediapipe as mp
 
+# MediaPipe hands model 21 nodes index
+FINGER_TIPS = {
+    "Thumb": 4,     # Thumb Tip
+    "Index": 8,     # Index Tip
+    "Middle": 12,   # Middle Tip
+    "Ring": 16,     # Ring Tip
+    "Pinky": 20     # Pinky Tip 
+}
+
 cap = cv2.VideoCapture(0)  # Open up the camera
 hands = mp.solutions.hands.Hands()
 draw = mp.solutions.drawing_utils
@@ -7,6 +16,7 @@ draw = mp.solutions.drawing_utils
 while True:
     ret, frame = cap.read()
     if not ret: break
+    
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     result = hands.process(rgb)
 
@@ -20,6 +30,8 @@ while True:
                 cv2.putText(frame, "Hands UP", (30,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
             else:
                 cv2.putText(frame, "Hands DOWN", (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+
+
 
     cv2.imshow("Hand Detection", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'): break
