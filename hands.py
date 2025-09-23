@@ -2,11 +2,11 @@ import cv2, mediapipe as mp
 
 # MediaPipe hands model 21 nodes index
 FINGER_TIPS = {
-    "Thumb": 4,     # Thumb Tip
-    "Index": 8,     # Index Tip
-    "Middle": 12,   # Middle Tip
-    "Ring": 16,     # Ring Tip
-    "Pinky": 20     # Pinky Tip 
+    "Thumb": 4,     
+    "Index": 8,     
+    "Middle": 12,   
+    "Ring": 16,     
+    "Pinky": 20     
 }
 
 cap = cv2.VideoCapture(0)  # Open up the camera
